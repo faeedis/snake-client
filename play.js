@@ -1,4 +1,8 @@
-const { connect } = require("./client");
+const { connect } = require('./client');
+const { setupInput } = require('./input');
 
-console.log("Connecting ...");
-connect();
+console.log('Connecting...');
+const connection = connect();
+
+// Set up user input via stdin
+setupInput(connection);
